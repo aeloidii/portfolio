@@ -5,13 +5,22 @@ import Footer from "@components/Footer";
 import { Suspense } from "react";
 
 export const metadata = {
-  title: "Promptopia",
-  description: "Discover & Share AI Prompts",
+  title: "EL OIDII ABDESSAMAD",
+  description: "Welcome to my portfolio",
 };
 
 const RootLayout = ({ children }) => {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link
+          rel="icon"
+          href="/icon?<generated>"
+          type="image/<generated>"
+          sizes="<generated>"
+        />
+      </head>
       <body>
         <div className="main">
           <div className="gradient" />
