@@ -6,9 +6,10 @@ import { useState } from "react";
 
 const Nav = () => {
   const [toggleDropdown, setToggleDropdown] = useState(false);
+
   return (
     <nav className="flex-between w-full mb-16 pt-3">
-      <Link href="/" className="flex gap-2 flex-center">
+      <Link href="/" className="flex relative gap-2 flex-center">
         <Image
           src={"/assets/images/logo.png"}
           alt="Promptopia Logo"
@@ -18,32 +19,36 @@ const Nav = () => {
         />
       </Link>
 
-      {/*Desktop Navigation */}
+      {/* Desktop Navigation */}
       <div className="sm:flex hidden">
         <div className="flex gap-3 md:gap-5">
           <Link href="/" className="black_btn">
             Home
           </Link>
-          <a href="#about" scroll={false} className="black_btn">
+          <Link href="/#about" className="black_btn">
             About me
-          </a>
-          <a href="#projects" scroll={false} className="black_btn">
+          </Link>
+          <Link href="/#projects" className="black_btn">
             Projects
-          </a>
-          <a href="#designs" scroll={false} className="black_btn">
+          </Link>
+          <Link href="/#designs" className="black_btn">
             Design
-          </a>
-          <a href="#contact" scroll={false} className="black_btn">
+          </Link>
+          <Link href="/#contact" className="black_btn">
             Contact
-          </a>
+          </Link>
         </div>
       </div>
 
-      {/* Mobile Navigation*/}
+      {/* Mobile Navigation */}
       <div className="sm:hidden flex relative">
         <div className="flex">
           <Image
-            src={toggleDropdown ? "/assets/icons/close.svg" : "/assets/icons/menu.svg"}
+            src={
+              toggleDropdown
+                ? "/assets/icons/close.svg"
+                : "/assets/icons/menu.svg"
+            }
             width={37}
             height={37}
             className="rounded-full cursor-pointer transition duration-500 ease-in-out transform hover:scale-110"
@@ -59,31 +64,29 @@ const Nav = () => {
               >
                 Home
               </Link>
-              <a
-                href="#about"
+              <Link
+                href="/#about"
                 className="dropdown_link"
-                onClick={() => {
-                  setToggleDropdown(false);
-                }}
+                onClick={() => setToggleDropdown(false)}
               >
                 About me
-              </a>
+              </Link>
               <Link
-                href="#projects"
+                href="/#projects"
                 className="dropdown_link"
                 onClick={() => setToggleDropdown(false)}
               >
                 Projects
               </Link>
               <Link
-                href="#designs"
+                href="/#designs"
                 className="dropdown_link"
                 onClick={() => setToggleDropdown(false)}
               >
                 Design
               </Link>
               <Link
-                href="#contact"
+                href="/#contact"
                 className="dropdown_link"
                 onClick={() => setToggleDropdown(false)}
               >

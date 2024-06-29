@@ -1,9 +1,15 @@
-import React from 'react'
+import MobileEntrance from "@components/MobileEntrance";
+import MobileLogin from "@components/MobileLogin";
+import MobileDashboard from "@components/MobileDashboard";
 
-const mobile = () => {
+const javaProject = () => {
   return (
-    <div>mobile project</div>
-  )
-}
+    <>
+      <MobileEntrance />
+      <MobileLogin />
+      <MobileDashboard />
+    </>
+  );
+};
 
-export default mobile
+export default javaProject;

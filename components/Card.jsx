@@ -17,9 +17,18 @@ const Card = ({ image, title, desc, link }) => {
       <p className="text-sm text-gray-600 sm:text-base max-w-2xl text-center mt-3">
         {desc}
       </p>
-      <Link href={link} className="mt-auto text-center black_btn rounded-full">
-        Read More
-      </Link>
+      {link === "Incoming" ? (
+        <button className="mt-auto text-center text-red-600 font-bold cursor-not-allowed">
+          it will be published Soon
+        </button>
+      ) : (
+        <Link
+          href={link}
+          className="mt-auto text-center black_btn rounded-full"
+        >
+          Read More
+        </Link>
+      )}
     </div>
   );
 };
