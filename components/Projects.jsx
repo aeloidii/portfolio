@@ -48,14 +48,14 @@ const Projects = () => {
       title:
         "Intermediate Application for Wholesale Distributors of Medical Products",
       desc: "Flutter, Dart, Firebase",
-      link: "Incoming",
+      link: "/web-grossiste",
     },
     {
       image: "/assets/images/grossiste.png",
       title:
         "The delivery driver's mobile application",
       desc: "Flutter, Dart, Firebase",
-      link: "Incoming",
+      link: "/livreur-grossiste",
     },
   ];
 
